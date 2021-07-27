@@ -1,7 +1,7 @@
 .container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 
   position: fixed;
@@ -14,6 +14,13 @@
 
   background: var(--white100);
   box-shadow: 0px 5px 6px #00000024;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
 }
 
 .images {

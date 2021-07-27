@@ -1,0 +1,173 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  padding: 0 20px;
+  background: url('/assets/medicos.png') no-repeat right;
+  background-size: cover;
+  height: 666px;
+  width: 100%;
+}
+
+.content {
+  max-width: 529px;
+}
+
+.title {
+  max-width: 438px;
+  font-size: 1.875rem;
+  line-height: 2.5625rem;
+  color: var(--white100);
+  margin-top: 314px;
+  text-shadow: 0px 3px 4px #00000082;
+}
+
+.separator {
+  width: 162px;
+  height: 2px;
+  background: var(--white100);
+}
+
+.gold_plan {
+  display: none;
+  font-size: 1.5625rem;
+  max-width: 327px;
+  line-height: 2.125rem;
+  color: var(--white100);
+}
+
+.price_info {
+  display: flex;
+  align-items: center;
+  margin-top: 27px !important;
+  color: var(--white100);
+
+  a {
+    border-radius: 19px;
+    font-size: 0.8125rem;
+    letter-spacing: 1.3px;
+    padding: 10px 21px;
+    background: var(--yellow200);
+    margin-left: 10px;
+    font-weight: 600;
+    box-shadow: 0px 3px 6px #0000008a;
+
+    transition: background 0.2s ease;
+
+    &:hover {
+      background: var(--yellow900);
+    }
+  }
+}
+
+.price_info_content {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 19px;
+}
+
+.t1 {
+  font-size: 1.0625rem;
+  font-style: italic;
+  font-weight: normal;
+  margin-inline-end: 0.3rem;
+}
+
+.t2 {
+  font-size: 1.0625rem;
+  font-weight: bold;
+}
+
+.t3 {
+  font-size: 2.0625rem;
+  margin-top: -8px !important;
+  font-weight: bold;
+  margin-inline-start: 0.2rem !important;
+}
+.t4 {
+  font-size: 1.125rem;
+  margin-inline-start: 0.2rem !important;
+  font-weight: bold;
+}
+
+.text_bottom {
+  color: var(--white100);
+  font-size: 0.5rem;
+  opacity: 0.5;
+  list-style: 0.625rem;
+  text-align: left;
+  margin-top: 12px;
+}
+
+@media (min-width: 728px) {
+  .container {
+    height: 768px;
+    padding: 0 32px;
+    align-items: center;
+  }
+
+  .title {
+    font-size: 2.5rem;
+    text-shadow: 0px 3px 6px #00000017;
+    line-height: 3.4375rem;
+    margin-top: 206px;
+  }
+
+  .separator {
+    width: 202px;
+  }
+
+  .gold_plan {
+    display: block;
+    margin-top: 20px;
+  }
+
+  .price_info {
+    margin-top: 18px !important;
+
+    a {
+      border-radius: 31px;
+      font-size: 1.3125rem;
+      letter-spacing: 0.13125px;
+      padding: 17px 37px;
+      margin-left: 28px;
+      font-weight: 600;
+    }
+  }
+
+  .price_info_content {
+    padding: 0;
+  }
+
+  .t1 {
+    font-size: 1.375rem;
+    line-height: 2.0625rem;
+  }
+
+  .t2 {
+    font-size: 2.1875rem;
+  }
+
+  .t3 {
+    font-size: 3.375rem;
+    line-height: 3.875rem;
+  }
+
+  .t4 {
+    font-size: 1.875rem;
+  }
+
+  .text_bottom {
+    font-size: 0.75rem;
+    line-height: 0.9375rem;
+    margin-top: 18px;
+  }
+}
+
+@media (min-width: 1366px) {
+  .container {
+    height: 634px;
+    margin-top: 94px;
+  }
+}

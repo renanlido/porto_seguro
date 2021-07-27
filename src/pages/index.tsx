@@ -1,3 +1,13 @@
+// import { Header } from '../components/Header';
+import { Menu } from '../components/Menu';
+
+import styles from './styles.module.scss';
+
 export default function Home() {
-  return <h1>Ola mundo</h1>;
+  return (
+    <div className={styles.container}>
+      <Menu />
+      {/* <Header /> */}
+    </div>
+  );
 }

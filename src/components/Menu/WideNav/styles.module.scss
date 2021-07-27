@@ -1,0 +1,30 @@
+.wide_nav {
+  display: none;
+  flex-direction: row;
+  font-size: 1.25rem;
+  color: var(--yellow300);
+
+  li {
+    & + li {
+      margin-left: 24px;
+    }
+  }
+}
+
+@media (min-width: 767px) {
+  .wide_nav {
+    display: flex;
+  }
+}
+
+@media (max-width: 922px) {
+  .wide_nav {
+    font-size: 1.1rem;
+
+    li {
+      & + li {
+        margin-left: 20px;
+      }
+    }
+  }
+}

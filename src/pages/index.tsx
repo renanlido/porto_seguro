@@ -4,8 +4,9 @@ import { uuid } from 'uuidv4';
 
 import { Header } from '../components/Header';
 import { Menu } from '../components/Menu';
-import { FeaturedHospitals } from '../components/pages/FeaturedHospitals';
-import { PlanBenefits } from '../components/pages/PlanBenefits';
+import { FeaturedHospitals } from '../components/_pages/FeaturedHospitals';
+import { PlanBenefits } from '../components/_pages/PlanBenefits';
+import { WantKnowMore } from '../components/_pages/WantKnowMore';
 
 // import { GoldPlan } from '../components/pages/GoldPlan';
 
@@ -42,6 +43,7 @@ export default function Home({ data }: CardProps) {
       <Header />
       <FeaturedHospitals data={data} />
       <PlanBenefits />
+      <WantKnowMore />
     </div>
   );
 }

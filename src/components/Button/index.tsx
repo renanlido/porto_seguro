@@ -9,7 +9,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 export function Button({ children, type = 'button', ...rest }: ButtonProps) {
   return (
     // eslint-disable-next-line react/button-has-type
-    <button type={type} {...rest} className={styles.button}>
+    <button type={type} className={styles.button} {...rest}>
       {children}
     </button>
   );

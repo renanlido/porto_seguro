@@ -1,7 +1,7 @@
 import { useBreakPointValue } from '../../../contexts/BreakPointContext';
 import { Button } from '../../Button';
 import { Card } from '../../Card';
-import { Container } from '../../Container';
+import { Container } from '../../DefaultContainer';
 import { H1 } from '../../HTMLElements/H1';
 import { Separator } from '../../Separator';
 

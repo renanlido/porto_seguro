@@ -1,5 +1,5 @@
 import { Card } from '../../Card';
-import { Container } from '../../Container';
+import { Container } from '../../DefaultContainer';
 import { H1 } from '../../HTMLElements/H1';
 import { H2 } from '../../HTMLElements/H2';
 import { Separator } from '../../Separator';

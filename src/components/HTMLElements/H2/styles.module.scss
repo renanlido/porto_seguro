@@ -1,0 +1,14 @@
+.heading2 {
+  font-weight: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  color: var(--gray200);
+  margin-bottom: 15px;
+}
+
+@media (min-width: 768px) {
+  .heading2 {
+    font-size: 1.25rem;
+    line-height: 1.6875rem;
+  }
+}

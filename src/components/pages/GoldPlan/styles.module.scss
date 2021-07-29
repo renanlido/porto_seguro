@@ -1,0 +1,163 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+  width: 100%;
+  margin-top: 40px;
+  align-items: center;
+}
+
+.content {
+  max-width: 1162px;
+
+  h1 {
+    max-width: 230px;
+    font-size: 1.375rem;
+    line-height: 1.875rem;
+    text-align: left;
+    color: var(--gray900);
+    font-weight: bold;
+    margin: 0;
+  }
+
+  p {
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
+    color: var(--gray200);
+    margin-bottom: 15px;
+  }
+}
+
+.separator {
+  max-width: 162px;
+  height: 2px;
+  background: var(--yellow200);
+  margin-top: 15px;
+  margin-bottom: 18px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: var(--yellow300);
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 12px;
+  padding: 25px 23px;
+}
+
+.card_text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  width: 100%;
+}
+
+.card_text_column_1 {
+  h1 {
+    font-size: 0.9378rem;
+    line-height: 1.25rem;
+    margin-bottom: 8px;
+    color: var(--yellow050);
+  }
+}
+
+.card_text_column_1_price {
+  h3 {
+    font-size: 0.9375rem;
+    font-style: italic;
+    font-weight: normal;
+    color: var(--white100);
+  }
+}
+
+.price_info_content {
+  display: flex;
+
+  .t1 {
+    font-size: 1.3125rem;
+    font-weight: bold;
+    font-style: normal;
+    margin-inline-end: 0.3rem;
+  }
+
+  .t2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-style: normal;
+    margin-top: -8px;
+  }
+
+  .t3 {
+    font-size: 1.375rem;
+    font-weight: bold;
+    font-style: normal;
+    margin-inline-start: 0.2rem !important;
+  }
+}
+
+.card_text_column_2 {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  p {
+    font-size: 0.4375rem;
+    line-height: 0.5625rem;
+    color: var(--white100);
+    max-width: 135px;
+    font-weight: normal;
+  }
+}
+
+.card_buttons {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 14px;
+
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    color: var(--white100);
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 0.075rem;
+    line-height: 1.0625rem;
+    padding: 7px 0;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 15px;
+    background: var(--yellow200);
+
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      margin-right: 2px;
+      > div {
+        width: 11px;
+        height: 2px;
+        background: var(--white100);
+      }
+    }
+
+    & + button {
+      margin-top: 19px;
+      letter-spacing: 0;
+      background: var(--yellow900);
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .card {
+    flex-direction: row;
+  }
+}

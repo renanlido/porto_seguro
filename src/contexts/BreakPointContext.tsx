@@ -49,4 +49,4 @@ export function BreakPointProvider({ children }: BreakPointProps) {
   );
 }
 
-export const useBrakPointValue = () => useContext(BreakPointContext);
+export const useBreakPointValue = () => useContext(BreakPointContext);

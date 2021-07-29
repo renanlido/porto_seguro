@@ -1,0 +1,68 @@
+.container_cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+
+  button {
+    position: relative;
+    width: 20px;
+    height: 13px;
+    background: transparent;
+  }
+
+  h1 {
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
+    margin-bottom: 7px;
+    color: var(--yellow400);
+    margin-top: 0;
+    text-align: center;
+  }
+}
+
+.featuredHospitals_card_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.featuredHospitals_card_content {
+  h1 {
+    font-size: 1.125rem;
+  }
+}
+
+.seta_baixo {
+  position: absolute;
+  bottom: 0;
+  left: 16%;
+  padding: 6px;
+  box-shadow: 2px -2px 0 1px var(--gray150) inset;
+  border: solid transparent;
+  border-width: 0 0 2px 2px;
+  transform: rotate(315deg);
+
+  transition: box-shadow 0.2s ease;
+
+  &:hover {
+    box-shadow: 2px -2px 0 1px var(--gray200) inset;
+  }
+}
+
+@media (min-width: 780px) {
+  .container_cards {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .seta_baixo {
+    padding: 7px;
+  }
+}

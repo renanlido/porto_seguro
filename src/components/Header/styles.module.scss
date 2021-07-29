@@ -11,7 +11,8 @@
 }
 
 .content {
-  max-width: 529px;
+  max-width: 1366px;
+  width: 100%;
 }
 
 .title {
@@ -98,6 +99,7 @@
   list-style: 0.625rem;
   text-align: left;
   margin-top: 12px;
+  max-width: 317px;
 }
 
 @media (min-width: 728px) {
@@ -162,6 +164,7 @@
     font-size: 0.75rem;
     line-height: 0.9375rem;
     margin-top: 18px;
+    max-width: 476px;
   }
 }
 

@@ -5,6 +5,7 @@ import { uuid } from 'uuidv4';
 import { Header } from '../components/Header';
 import { Menu } from '../components/Menu';
 import { FeaturedHospitals } from '../components/_pages/FeaturedHospitals';
+import { Footer } from '../components/_pages/Footer';
 import { PlanBenefits } from '../components/_pages/PlanBenefits';
 import { WantKnowMore } from '../components/_pages/WantKnowMore';
 
@@ -44,6 +45,7 @@ export default function Home({ data }: CardProps) {
       <FeaturedHospitals data={data} />
       <PlanBenefits />
       <WantKnowMore />
+      <Footer />
     </div>
   );
 }

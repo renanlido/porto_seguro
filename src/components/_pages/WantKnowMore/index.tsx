@@ -94,7 +94,7 @@ export function WantKnowMore() {
 
             <Input
               name="email"
-              label="Seu telefone"
+              label="Seu e-mail"
               placeholder="seuemail@email.com"
               ref={register}
               error={errors.email}

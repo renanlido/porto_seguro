@@ -14,7 +14,7 @@ export function DropBoxMenu() {
     <nav
       ref={dropdownRef}
       className={styles.dropBoxMenu_container}
-      style={{ display: isActive ? 'block' : 'none' }}
+      style={{ visibility: isActive ? 'visible' : 'hidden' }}
     >
       <ul>
         <li>

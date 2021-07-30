@@ -40,26 +40,6 @@
   width: 100%;
   gap: 20px;
 
-  div {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-
-    h3 {
-      font-size: 0.75rem;
-      font-weight: bold;
-      color: var(--yellow400);
-      line-height: 1.0625rem;
-    }
-
-    input {
-      padding: 10px;
-      color: var(--gray180);
-      font-size: 0.5625rem;
-      border: 1px solid #9a6d0c;
-    }
-  }
-
   button {
     font-size: 0.9375rem;
     letter-spacing: 0.1875rem;
@@ -173,23 +153,6 @@
 
     .wantKnowMore_form {
       gap: 0;
-      div {
-        h3 {
-          font-size: 1.125rem;
-          line-height: 1.5rem;
-          margin-bottom: 10px;
-        }
-
-        input {
-          padding: 19px;
-          font-size: 0.8125rem;
-          border: 1px solid #9a6d0c;
-        }
-
-        & + div {
-          margin-top: 20px;
-        }
-      }
 
       .wantKnowMore_form_image {
         width: 214px;

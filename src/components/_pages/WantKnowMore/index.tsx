@@ -1,4 +1,8 @@
 import Image from 'next/image';
+import * as Yup from 'yup';
+import { validatePhone } from 'validations-br';
+import { useForm, SubmitHandler } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
 
 import { FaWhatsapp } from 'react-icons/fa';
 import { MdLocalPhone } from 'react-icons/md';
@@ -11,8 +15,41 @@ import styles from './styles.module.scss';
 import phoneCall from '../../../assets/phoneCall.svg';
 import imNotRobot from '../../../assets/imNotRobot.png';
 import { Button } from '../../Button';
+import { Input } from '../../Form/Input';
+
+interface WantKnowMoreFormData {
+  name: string;
+  email: string;
+  phone: string;
+}
+
+const createWantKnowMoreSchema = Yup.object().shape({
+  name: Yup.string().required('Nome obrigatório'),
+  email: Yup.string().required('E-mail obrigatório').email('E-mail inválido'),
+  phone: Yup.string()
+    .required('Telefone obrigatório')
+    .test('is-phone', 'Telefone inválido', value => validatePhone(value))
+});
 
 export function WantKnowMore() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors }
+  } = useForm<WantKnowMoreFormData>({
+    resolver: yupResolver(createWantKnowMoreSchema)
+  });
+
+  // FUNCTION TO SEND DATA
+
+  const handleSubmitContact: SubmitHandler<WantKnowMoreFormData> = ({
+    email,
+    phone,
+    name
+  }) => {
+    console.log(email, phone, name);
+  };
+
   return (
     <Container>
       <H1>Quer saber mais?</H1>
@@ -32,27 +69,42 @@ export function WantKnowMore() {
         </div>
 
         <div className={styles.wantKnowMore_bottom_content}>
-          <form className={styles.wantKnowMore_form}>
-            <div>
-              <h3>Seu nome:</h3>
-              <input id="name" type="text" placeholder="Seu nome." />
-            </div>
+          <form
+            className={styles.wantKnowMore_form}
+            onSubmit={handleSubmit(handleSubmitContact)}
+          >
+            <Input
+              name="name"
+              label="Seu nome"
+              placeholder="Insira seu nome aqui"
+              ref={register}
+              error={errors.name}
+              {...register('name')}
+            />
 
-            <div>
-              <h3>Telefone:</h3>
-              <input type="text" placeholder="(DDD) 99999-9999" />
-            </div>
+            <Input
+              name="phone"
+              label="Seu telefone"
+              placeholder="(DDD)99999-9999"
+              ref={register}
+              error={errors.phone}
+              {...register('phone')}
+            />
 
-            <div>
-              <h3>Email:</h3>
-              <input type="email" placeholder="seuemail@email.com" />
-            </div>
+            <Input
+              name="email"
+              label="Seu telefone"
+              placeholder="seuemail@email.com"
+              ref={register}
+              error={errors.email}
+              {...register('email')}
+            />
 
             <div className={styles.wantKnowMore_form_image}>
               <Image src={imNotRobot} width={340} height={101} />
             </div>
 
-            <Button type="button">ENVIAR CONTATO</Button>
+            <Button type="submit">ENVIAR CONTATO</Button>
           </form>
 
           <div className={styles.wantKnowMore_bottom_separator} />

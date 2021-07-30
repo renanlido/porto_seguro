@@ -7,7 +7,7 @@ import styles from './styles.module.scss';
 
 export function Footer() {
   return (
-    <div className={styles.footer_container}>
+    <footer className={styles.footer_container}>
       <div>
         <Image src={seloANS} width={89} height={19} />
       </div>
@@ -29,6 +29,6 @@ export function Footer() {
         <br />
         Rio de Janeiro/RJ - CEP: 20.020-906
       </p>
-    </div>
+    </footer>
   );
 }

@@ -14,7 +14,8 @@ export function Footer() {
       </div>
 
       <div className={styles.footer_marlin_logo}>
-        Desenvolvimento: <Image src={marlin} width={47} height={20} />
+        Desenvolvimento:{' '}
+        <Image src={marlin} width={47} height={20} alt="Logo Marlin" />
       </div>
 
       <p>

@@ -1,9 +1,12 @@
 .mobile_nav {
   display: flex;
-  flex-direction: column;
   width: 35px;
   height: 22px;
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
+  background: transparent;
+  z-index: 2;
 
   div[id='b1'] {
     width: 100%;

@@ -1,11 +1,18 @@
+import { useDrop } from '../../../contexts/DropContext';
 import styles from './styles.module.scss';
 
 export function MobileNav() {
+  const { onOpen } = useDrop();
+
   return (
-    <div className={styles.mobile_nav}>
+    <button
+      type="button"
+      className={styles.mobile_nav}
+      onClick={() => onOpen('menu')}
+    >
       <div id="b1" />
       <div id="b2" />
       <div id="b3" />
-    </div>
+    </button>
   );
 }

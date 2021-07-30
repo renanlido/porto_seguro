@@ -1,6 +1,8 @@
 // import { Header } from '../components/Header';
 import { GetServerSideProps } from 'next';
 import { uuid } from 'uuidv4';
+import { CompleteListHospitalsDrop } from '../components/CompleteListHospitalsDrop';
+import { DropBoxMenu } from '../components/DropBoxMenu';
 
 import { Header } from '../components/Header';
 import { Menu } from '../components/Menu';
@@ -39,8 +41,10 @@ type CardProps = {
 
 export default function Home({ data }: CardProps) {
   return (
-    <div className={styles.container}>
+    <div className={styles.index_container}>
       <Menu />
+      <DropBoxMenu />
+      <CompleteListHospitalsDrop />
       <Header />
       <FeaturedHospitals data={data} />
       <PlanBenefits />
@@ -76,7 +80,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
       imageName: 'laranjeiras',
       title: 'Hospital Perinatal Laranjeiras',
       details: {
-        text: 'O Complexo Pediátrico do Hospital Vitória conta com uma equipe de pronto atendimento formada por <b>pediatras, cirurgiões e ortopedistas</b>, além de profissionais de diversas subespecialidades da pediatria, capacitados para assistência a urgências e emergências de pacientes recém-nascidos e até os 18 anos de idade.',
+        text: '1O Complexo Pediátrico do Hospital Vitória conta com uma equipe de pronto atendimento formada por <b>pediatras, cirurgiões e ortopedistas</b>, além de profissionais de diversas subespecialidades da pediatria, capacitados para assistência a urgências e emergências de pacientes recém-nascidos e até os 18 anos de idade.',
         adress: {
           street: 'Av. Jorge Curi, 550',
           neighborhood: 'Barra da Tijuca',
@@ -95,7 +99,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
       imageName: 'copa_dor',
       title: "Hospital Copa D'Or",
       details: {
-        text: 'O Complexo Pediátrico do Hospital Vitória conta com uma equipe de pronto atendimento formada por <b>pediatras, cirurgiões e ortopedistas</b>, além de profissionais de diversas subespecialidades da pediatria, capacitados para assistência a urgências e emergências de pacientes recém-nascidos e até os 18 anos de idade.',
+        text: '2O Complexo Pediátrico do Hospital Vitória conta com uma equipe de pronto atendimento formada por <b>pediatras, cirurgiões e ortopedistas</b>, além de profissionais de diversas subespecialidades da pediatria, capacitados para assistência a urgências e emergências de pacientes recém-nascidos e até os 18 anos de idade.',
         adress: {
           street: 'Av. Jorge Curi, 550',
           neighborhood: 'Barra da Tijuca',

@@ -1,22 +1,39 @@
+import { Link } from 'react-scroll';
+
 import styles from './styles.module.scss';
 
 export function WideNav() {
   return (
     <ul className={styles.wide_nav}>
       <li>
-        <a href="#">Sobre</a>
+        <Link to="#sobre" href="#beneficios" offset={-130} smooth>
+          Sobre
+        </Link>
       </li>
       <li>
-        <a href="#">Contatos</a>
+        <Link to="#hospitais" href="#hospitais" offset={-130} smooth>
+          Hospitais
+        </Link>
       </li>
       <li>
-        <a href="#">Benefícios</a>
+        <Link to="#beneficios" href="#beneficios" offset={-130} smooth>
+          Benefícios
+        </Link>
       </li>
       <li>
-        <a href="#">Serviços especiais</a>
+        <Link
+          to="#servicos_especiais"
+          href="#servicos_especiais"
+          offset={-130}
+          smooth
+        >
+          Serviços especiais
+        </Link>
       </li>
       <li>
-        <a href="#">Contatos</a>
+        <Link to="#contatos" href="#contatos" offset={-130} smooth>
+          Contatos
+        </Link>
       </li>
     </ul>
   );

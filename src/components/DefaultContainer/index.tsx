@@ -1,13 +1,15 @@
+import { DetailedHTMLProps, HTMLAttributes } from 'react';
 import styles from './styles.module.scss';
 
-type ContainerProps = {
+interface ContainerProps
+  extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   children: React.ReactNode;
-};
+}
 
-export function Container({ children }: ContainerProps) {
+export function Container({ children, ...rest }: ContainerProps) {
   return (
-    <div className={styles.container}>
-      <div className={styles.content}>{children}</div>
+    <div className={styles.default_container} {...rest}>
+      <div className={styles.default_content}>{children}</div>
     </div>
   );
 }

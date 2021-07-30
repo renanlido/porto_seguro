@@ -1,3 +1,5 @@
+import { useBreakPointValue } from '../../../contexts/BreakPointContext';
+import { useDrop } from '../../../contexts/DropContext';
 import { Card } from '../../Card';
 import { Container } from '../../DefaultContainer';
 import { H1 } from '../../HTMLElements/H1';
@@ -31,8 +33,11 @@ type CardProps = {
 };
 
 export function FeaturedHospitals({ data: featuredHospitals }: CardProps) {
+  const { isWide } = useBreakPointValue();
+  const { isFeaturedHospitalsActive } = useDrop();
+
   return (
-    <Container>
+    <Container id="#featuredHospitals">
       <H1>Hospitais em destaque</H1>
       <Separator />
       <H2>
@@ -46,19 +51,20 @@ export function FeaturedHospitals({ data: featuredHospitals }: CardProps) {
           <Card
             key={featuredHospital.id}
             cardData={{
+              title: featuredHospital.title,
               imageName: featuredHospital.imageName,
               details: featuredHospital.details
             }}
-          >
-            <div className={styles.featuredHospitals_card_content}>
-              <h1>{featuredHospital.title}</h1>
-              <button type="button">
-                <span className={styles.seta_baixo} />
-              </button>
-            </div>
-          </Card>
+            isButtonVisible
+          />
         ))}
       </div>
+      <div
+        className={styles.card_isActive}
+        style={{
+          display: isFeaturedHospitalsActive && isWide ? 'block' : 'none'
+        }}
+      />
     </Container>
   );
 }

@@ -1,4 +1,5 @@
 import { useBreakPointValue } from '../../../contexts/BreakPointContext';
+import { useDrop } from '../../../contexts/DropContext';
 import { Button } from '../../Button';
 import { Card } from '../../Card';
 import { Container } from '../../DefaultContainer';
@@ -9,9 +10,10 @@ import styles from './styles.module.scss';
 
 export function PlanBenefits() {
   const { isWide } = useBreakPointValue();
+  const { onOpen } = useDrop();
 
   return (
-    <Container>
+    <Container id="#beneficios">
       <H1>Benefícios do plano</H1>
       <Separator />
 
@@ -34,7 +36,9 @@ export function PlanBenefits() {
               seus funcionários precisam.
             </p>
 
-            <Button>VEJA A LISTA COMPLETA DE HOSPITAIS </Button>
+            <Button onClick={() => onOpen('completeHospitals')}>
+              VEJA A LISTA COMPLETA DE HOSPITAIS
+            </Button>
           </div>
         </Card>
 

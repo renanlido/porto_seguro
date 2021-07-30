@@ -1,0 +1,126 @@
+.completeListHospitalsDrop_container {
+  visibility: hidden;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  top: 62px;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.completeListHospitalsDrop_content {
+  display: flex;
+  position: relative;
+
+  .completeListHospitalsDorp_cross {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+
+    color: #c9c9c9;
+
+    background: transparent;
+  }
+
+  justify-content: center;
+  max-width: 309px;
+  max-height: 464px;
+
+  background-color: var(--white100);
+
+  border-radius: 12px;
+
+  margin-top: 139px;
+}
+
+.completeListHospitalsDorp_text {
+  padding: 32px 40px;
+  color: var(--gray900);
+
+  h1 {
+    font-size: 1.1875rem;
+    color: var(--yellow400);
+  }
+
+  p {
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+
+    & + p {
+      margin-top: 30px;
+    }
+  }
+
+  > button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+    bottom: 14px;
+    font-size: 0.75rem;
+    padding: 9px 0px;
+    max-width: 289px;
+
+    svg {
+      width: 13px;
+      height: 15px;
+      margin-right: 3px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .completeListHospitalsDrop_container {
+    top: 94px;
+  }
+
+  .completeListHospitalsDrop_content {
+    justify-content: flex-start;
+    max-width: 686px;
+    max-height: 623px;
+    width: 100%;
+    margin-top: 30px;
+
+    .completeListHospitalsDorp_cross {
+      top: 28px;
+      right: 43px;
+    }
+  }
+
+  .completeListHospitalsDorp_text {
+    width: 100%;
+    padding: 35px 42px;
+
+    h1 {
+      font-size: 1.875rem;
+      line-height: 2.5625rem;
+    }
+
+    p {
+      margin-top: 15px;
+      font-size: 1.25rem;
+      line-height: 1.6875rem;
+    }
+
+    > button {
+      bottom: 49px;
+      font-size: 1.0625rem;
+      padding: 9px 0px;
+      max-width: 481px;
+
+      svg {
+        width: 19px;
+        height: 20px;
+        margin-right: 10px;
+        font-size: 30px !important;
+      }
+    }
+  }
+}

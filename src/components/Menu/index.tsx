@@ -13,9 +13,9 @@ export function Menu() {
   const { isWide } = useBreakPointValue();
 
   return (
-    <div className={styles.container}>
-      <div className={styles.content}>
-        <div className={styles.images}>
+    <div className={styles.nav_container}>
+      <div className={styles.nav_content}>
+        <div className={styles.nav_images}>
           <div id="d1">
             <Image
               src={logoNorteASul}

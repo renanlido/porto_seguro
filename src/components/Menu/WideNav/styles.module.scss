@@ -5,8 +5,18 @@
   color: var(--yellow300);
 
   li {
+    a {
+      &.active {
+        color: var(--yellow900);
+      }
+    }
+
     & + li {
       margin-left: 24px;
+    }
+
+    &:hover {
+      color: var(--yellow900);
     }
   }
 }

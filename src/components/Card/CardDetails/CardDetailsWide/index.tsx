@@ -1,5 +1,6 @@
 import { FiMapPin } from 'react-icons/fi';
 import { TiPhoneOutline } from 'react-icons/ti';
+import { useBreakPointValue } from '../../../../contexts/BreakPointContext';
 import { Strong } from '../../../HTMLElements/Strong';
 import styles from './styles.module.scss';
 
@@ -18,20 +19,28 @@ type CardDetailsProps = {
       number: string;
     };
   };
+  isActive: boolean;
 };
 
-export function CardDetailsWide({ details }: CardDetailsProps) {
+export function CardDetailsWide({ details, isActive }: CardDetailsProps) {
+  const { isWide } = useBreakPointValue();
+
+  console.log(isActive);
+
   return details ? (
-    <div className={styles.card_details}>
+    <div
+      className={styles.card_details_wide}
+      style={{ display: isWide && isActive ? 'flex' : 'none' }}
+    >
       {details.text !== null && (
         <p dangerouslySetInnerHTML={{ __html: details.text }} />
       )}
       <hr />
-      <div className={styles.container_adress}>
-        <div className={styles.adress}>
+      <div className={styles.card_details_wide_container_adress}>
+        <div className={styles.card_details_wide_adress}>
           <FiMapPin />
           <Strong>Endereço:</Strong>
-          <span className={styles.detailed_adress}>
+          <span className={styles.card_details_wide_detailed_adress}>
             {details.adress.street} <br />
             {details.adress.neighborhood}, {details.adress.state} -{' '}
             {details.adress.uf}
@@ -40,7 +49,7 @@ export function CardDetailsWide({ details }: CardDetailsProps) {
           </span>
         </div>
 
-        <div className={styles.phone}>
+        <div className={styles.card_details_wide_phone}>
           <TiPhoneOutline />
           <Strong>Telefone:</Strong>({details.phone.ddd}) {details.phone.number}
         </div>

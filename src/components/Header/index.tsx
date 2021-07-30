@@ -1,30 +1,39 @@
+import { Link } from 'react-scroll';
+
 import styles from './styles.module.scss';
 
 export function Header() {
   return (
-    <div className={styles.container}>
-      <div className={styles.content}>
-        <h1 className={styles.title}>
+    <div className={styles.header_container}>
+      <div className={styles.header_content}>
+        <h1 className={styles.header_title}>
           Conforto e qualidade para levar bem-estar com alto padrão de
           atendimento a seus funcionários.
         </h1>
-        <div className={styles.separator} />
+        <div className={styles.header_separator} />
 
-        <div className={styles.gold_plan}>
+        <div className={styles.header_gold_plan}>
           Conheça o plano Ouro da Porto Seguro Saúde.
         </div>
 
-        <div className={styles.price_info}>
-          <div className={styles.price_info_content}>
-            <h3 className={styles.t1}>A partir de</h3>
-            <h3 className={styles.t2}>R$</h3>
-            <h3 className={styles.t3}>255</h3>
-            <h3 className={styles.t4}>,65*</h3>
+        <div className={styles.header_price_info}>
+          <div className={styles.header_price_info_content}>
+            <h3 className={styles.header_t1}>A partir de</h3>
+            <h3 className={styles.header_t2}>R$</h3>
+            <h3 className={styles.header_t3}>255</h3>
+            <h3 className={styles.header_t4}>,65*</h3>
           </div>
-          <a href="#">VER MAIS</a>
+          <Link
+            to="#featuredHospitals"
+            href="#featuredHospitals"
+            offset={-100}
+            smooth
+          >
+            VER MAIS
+          </Link>
         </div>
 
-        <p className={styles.text_bottom}>
+        <p className={styles.header_text_bottom}>
           *Valor referente ao plano Ouro Copar Q (ANS: 481.277/18-8) de 3 à 9
           vidas, com 20% de copart. com faixa etária entre 0 e 18 anos. Sem IOF.
           <br />

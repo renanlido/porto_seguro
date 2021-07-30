@@ -21,34 +21,11 @@
   }
 }
 
-.featuredHospitals_card_content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-}
+.card_isActive {
+  height: 339px;
 
-.featuredHospitals_card_content {
-  h1 {
-    font-size: 1.125rem;
-  }
-}
-
-.seta_baixo {
-  position: absolute;
-  bottom: 0;
-  left: 16%;
-  padding: 6px;
-  box-shadow: 2px -2px 0 1px var(--gray150) inset;
-  border: solid transparent;
-  border-width: 0 0 2px 2px;
-  transform: rotate(315deg);
-
-  transition: box-shadow 0.2s ease;
-
-  &:hover {
-    box-shadow: 2px -2px 0 1px var(--gray200) inset;
+  @media (max-width: 1045px) {
+    height: 477px;
   }
 }
 

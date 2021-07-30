@@ -36,6 +36,7 @@ export function FeaturedHospitals({ data: featuredHospitals }: CardProps) {
   const { isWide } = useBreakPointValue();
   const { isFeaturedHospitalsActive } = useDrop();
 
+  // PAGE FEATURED HOSPITALS
   return (
     <Container id="#featuredHospitals">
       <H1>Hospitais em destaque</H1>

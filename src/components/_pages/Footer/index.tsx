@@ -5,6 +5,7 @@ import marlin from '../../../assets/marlinLogo.png';
 
 import styles from './styles.module.scss';
 
+// FOOTER COMPONENT
 export function Footer() {
   return (
     <footer className={styles.footer_container}>

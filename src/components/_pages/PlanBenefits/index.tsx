@@ -12,6 +12,7 @@ export function PlanBenefits() {
   const { isWide } = useBreakPointValue();
   const { onOpen } = useDrop();
 
+  // PAGE PLAN BENEFITS
   return (
     <Container id="#beneficios">
       <H1>Benefícios do plano</H1>

@@ -25,6 +25,8 @@ type DropContextData = {
   onClose: () => void;
 };
 
+// CONTEXT TO DROP BUTTONS AND MENUS
+
 const DropContext = createContext({} as DropContextData);
 
 export function DropProvider({ children }: DropProps) {

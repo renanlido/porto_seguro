@@ -16,6 +16,8 @@ type BreakPointContextData = {
   isWide: boolean;
 };
 
+// CONTEXT TO GET DIMENSIONS DYNAMICALLY
+
 const BreakPointContext = createContext({} as BreakPointContextData);
 
 export function BreakPointProvider({ children }: BreakPointProps) {

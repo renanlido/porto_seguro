@@ -13,6 +13,8 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   label: string;
 }
 
+// PATTERN TO INPUT AND INPUT VALIDATIONS
+
 const InputBase: ForwardRefRenderFunction<HTMLInputElement, InputProps> = (
   { name, id, placeholder, error = null, label, ...rest },
   ref

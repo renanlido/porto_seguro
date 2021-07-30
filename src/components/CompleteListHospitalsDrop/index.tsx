@@ -6,6 +6,8 @@ import { H1 } from '../HTMLElements/H1';
 
 import styles from './styles.module.scss';
 
+// COMPLETE LIST OF HOSPITALS DROP
+
 export function CompleteListHospitalsDrop() {
   const { completeListHospitalsRef, onClose, isCompleteListActive } = useDrop();
   return (

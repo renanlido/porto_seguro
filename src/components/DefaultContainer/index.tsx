@@ -6,10 +6,12 @@ interface ContainerProps
   children: React.ReactNode;
 }
 
+// DEFAULT CONTAINER TO LIMIT THE SITE OR APLICATION
+
 export function Container({ children, ...rest }: ContainerProps) {
   return (
-    <div className={styles.default_container} {...rest}>
-      <div className={styles.default_content}>{children}</div>
-    </div>
+    <article className={styles.default_container} {...rest}>
+      <section className={styles.default_content}>{children}</section>
+    </article>
   );
 }

@@ -22,6 +22,7 @@ type CardDetailsProps = {
   isActive: boolean;
 };
 
+// COMPONENT CARD DETAILS WIDE VERSION
 export function CardDetailsWide({ details, isActive }: CardDetailsProps) {
   const { isWide } = useBreakPointValue();
 

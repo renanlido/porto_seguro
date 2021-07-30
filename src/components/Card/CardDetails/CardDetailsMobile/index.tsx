@@ -25,6 +25,7 @@ type CardDetailsProps = {
 export function CardDetails({ details, isActive }: CardDetailsProps) {
   const { isWide } = useBreakPointValue();
 
+  // COMPONENT CARD DETAILS MOBILE VERSION
   return details ? (
     <div
       className={styles.card_details_mobile}

@@ -23,6 +23,7 @@ interface WantKnowMoreFormData {
   phone: string;
 }
 
+// SCHEMA TO VERIFICATION INPUT DATA
 const createWantKnowMoreSchema = Yup.object().shape({
   name: Yup.string().required('Nome obrigatório'),
   email: Yup.string().required('E-mail obrigatório').email('E-mail inválido'),
@@ -31,6 +32,7 @@ const createWantKnowMoreSchema = Yup.object().shape({
     .test('is-phone', 'Telefone inválido', value => validatePhone(value))
 });
 
+// PAGE WANTK KNOW MORE INFORMATIONS
 export function WantKnowMore() {
   const {
     register,
@@ -40,8 +42,7 @@ export function WantKnowMore() {
     resolver: yupResolver(createWantKnowMoreSchema)
   });
 
-  // FUNCTION TO SEND DATA
-
+  // FUNCTION TO SEND DATA FOR THE DATABASE
   const handleSubmitContact: SubmitHandler<WantKnowMoreFormData> = ({
     email,
     phone,
@@ -51,7 +52,7 @@ export function WantKnowMore() {
   };
 
   return (
-    <Container>
+    <Container id="#wantToSayMore">
       <H1>Quer saber mais?</H1>
 
       <Separator />

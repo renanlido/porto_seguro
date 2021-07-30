@@ -19,7 +19,7 @@
     "react-router-dom": "^5.2.0",
     "react-scroll": "^1.8.3",
     "sass": "^1.36.0",
-    "uuidv4": "^6.2.11",
+    "uuid": "^8.3.2",
     "validations-br": "^1.2.0",
     "yup": "^0.32.9"
   },

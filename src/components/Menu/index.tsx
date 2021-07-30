@@ -9,11 +9,14 @@ import { WideNav } from './WideNav';
 import { MobileNav } from './MobileNav';
 import { useBreakPointValue } from '../../contexts/BreakPointContext';
 
+// COMPONENT TO RENDER FIXED TOP MENU
+
 export function Menu() {
+  // VERIFY IF IS WIDE
   const { isWide } = useBreakPointValue();
 
   return (
-    <div className={styles.nav_container}>
+    <nav className={styles.nav_container}>
       <div className={styles.nav_content}>
         <div className={styles.nav_images}>
           <div id="d1">
@@ -27,7 +30,7 @@ export function Menu() {
           <div>
             <Image
               src={logoPortoSeguro}
-              alt="Porto Seguro"
+              alt="Logo Porto Seguro"
               width={`${isWide ? 98 : 73}`}
               height={`${isWide ? 31 : 23}`}
             />
@@ -38,6 +41,6 @@ export function Menu() {
 
         <WideNav />
       </div>
-    </div>
+    </nav>
   );
 }

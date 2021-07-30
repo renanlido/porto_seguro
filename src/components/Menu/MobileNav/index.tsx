@@ -1,6 +1,7 @@
 import { useDrop } from '../../../contexts/DropContext';
 import styles from './styles.module.scss';
 
+// MENU HORIZONTAL BARS
 export function MobileNav() {
   const { onOpen } = useDrop();
 

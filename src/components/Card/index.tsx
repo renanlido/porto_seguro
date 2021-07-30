@@ -7,7 +7,7 @@ import styles from './styles.module.scss';
 
 type CardProps = {
   cardData: {
-    title: string;
+    title?: string;
     imageName: string;
     details?: {
       text: string;
@@ -33,13 +33,15 @@ type CardProps = {
   isButtonVisible?: boolean;
 };
 
+// CARD COMPONENT
+
 export function Card({
   cardData,
   children,
   cardProps,
   isButtonVisible
 }: CardProps) {
-  const [isActive, setIsActive] = useState(false);
+  const [isActive, setIsActive] = useState(false); // state to check whether card details are being displayed or not
   const { onOpen } = useDrop();
 
   return (

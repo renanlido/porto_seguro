@@ -2,6 +2,8 @@ import { Link } from 'react-scroll';
 
 import styles from './styles.module.scss';
 
+// MENU WIDE VERSION
+
 export function WideNav() {
   return (
     <ul className={styles.wide_nav}>
@@ -11,7 +13,7 @@ export function WideNav() {
         </Link>
       </li>
       <li>
-        <Link to="#hospitais" href="#hospitais" offset={-130} smooth>
+        <Link to="#featuredHospitals" href="#hospitais" offset={-130} smooth>
           Hospitais
         </Link>
       </li>
@@ -31,7 +33,7 @@ export function WideNav() {
         </Link>
       </li>
       <li>
-        <Link to="#contatos" href="#contatos" offset={-130} smooth>
+        <Link to="#wantToSayMore" href="#wantToSayMore" offset={-130} smooth>
           Contatos
         </Link>
       </li>

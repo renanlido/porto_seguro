@@ -6,6 +6,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
 }
 
+// PATTERN TO BUTTON
 export function Button({ children, type = 'button', ...rest }: ButtonProps) {
   return (
     // eslint-disable-next-line react/button-has-type

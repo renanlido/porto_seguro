@@ -2,9 +2,10 @@ import { Link } from 'react-scroll';
 
 import styles from './styles.module.scss';
 
+// HEADER COMPONENT
 export function Header() {
   return (
-    <div className={styles.header_container}>
+    <header className={styles.header_container}>
       <div className={styles.header_content}>
         <h1 className={styles.header_title}>
           Conforto e qualidade para levar bem-estar com alto padrão de
@@ -40,6 +41,6 @@ export function Header() {
           Promoção válida até 30 de abril de 2021.
         </p>
       </div>
-    </div>
+    </header>
   );
 }
